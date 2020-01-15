@@ -4,10 +4,10 @@
 
 # HLS XMLTV + TVHeadEnd - Auto Build
 
-**Warning Experimental**
-i build this to some experiments in *on-the-fly* transcoding, 
-i got tired of having to keep reconfigure it so i built this to set everything up instantly
-and for HLS XMLTV to be able to *PUSH* xmltv files to it instantly
+**Warning Experimental**    
+i build this to do some experiments in *on-the-fly* transcoding,    
+i got tired of having to keep reconfigure it, 
+so i built this to set everything up instantly and for HLS XMLTV to be able to *PUSH* xmltv files to it instantly    
 
 ## Requirements
 
@@ -26,8 +26,7 @@ and for HLS XMLTV to be able to *PUSH* xmltv files to it instantly
 
 this will pass variables to docker-compose up
 
-## You should now have a working setup, to configure HLS-XMLTV-Docker follow instructions listed here
-https://github.com/deanochips/HLS-XMLTV-Docker
+## [You should now have a working setup, to configure HLS-XMLTV-Docker follow instructions listed here](https://github.com/deanochips/HLS-XMLTV-Docker)
 
 ### Notes
 
