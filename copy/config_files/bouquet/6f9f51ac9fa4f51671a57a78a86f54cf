@@ -1,0 +1,21 @@
+{
+	"enabled": true,
+	"maptoch": true,
+	"mapopt": [
+		"mapradio",
+		"encrypted"
+	],
+	"chtag": [
+		"bouquet_tag"
+	],
+	"chtag_ref": "04ca909a029fdfbb5058f5d04177a5d8",
+	"name": "testname",
+	"ssl_peer_verify": false,
+	"ext_url_period": 60,
+	"source": "iptv-network://ff8a9e839c5f3fc40b24108e7ff867db",
+	"services": {
+	},
+	"services_seen": 27,
+	"comment": "",
+	"lcn_off": 0
+}

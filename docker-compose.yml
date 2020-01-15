@@ -1,0 +1,47 @@
+version: "3"
+
+services:
+    hls-xmltv:
+        build: https://github.com/deanochips/HLS-XMLTV-Docker.git
+        container_name: HLS-XMLTV
+        ports:
+            - '3000:80'
+        environment:
+            - "MY_IPS=${MY_IPS}"
+        volumes:
+            - '/usr/local/bin/HLS_XMLTV/docker/demo/concat_lists/:/HLS-XMLTV/concat_lists/'
+            - '/usr/local/bin/HLS_XMLTV/docker/demo/config/:/HLS-XMLTV/config/'
+            - '/usr/local/bin/HLS_XMLTV/channels/:/HLS-XMLTV/channels/'
+            - '/usr/local/bin/HLS_XMLTV/docker/demo/cache/:/HLS-XMLTV/cache/'
+            - data-volume:/epggrab/
+
+        tmpfs:
+            - '/var/www/html/streams:exec,size=1G,mode=777,uid=82,gid=82'
+            - '/tmp:exec,mode=777'
+
+        network_mode: bridge
+        
+    tvheadend:
+        container_name: tvheadend
+
+        environment:
+            - PUID=1000
+            - PGID=1000
+            - TZ=Europe/London
+#            - RUN_OPTS=<run
+        ports:
+            - '9981:9981'
+            - '9982:9982'
+        volumes:
+            - data-volume:/config/epggrab/
+            - '/home/dean/tvheadend/recordings/:/recordings/'
+            - '/home/dean/tvheadend/config/:/config/'
+# uncomment if you have usb devices yo connect           
+#        devices:
+#            - '/dev/dri:/dev/dri'
+#            - '/dev/dvb:/dev/dvb'
+        build: .
+        restart: unless-stopped
+
+volumes:
+  data-volume:
