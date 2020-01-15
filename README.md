@@ -7,7 +7,7 @@
 **Warning Experimental**    
 i build this to do some experiments in *on-the-fly* transcoding,    
 i got tired of having to keep reconfigure it, 
-so i built this to set everything up instantly and for HLS XMLTV to be able to *PUSH* xmltv files to it instantly    
+so i built this to set everything up instantly and also configures HLS XMLTV to be able to *PUSH* xmltv files to it instantly    
 
 ## Requirements
 
